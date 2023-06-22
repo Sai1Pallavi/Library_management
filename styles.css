@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  background-image: url("Back_ground_img.jpeg");
+}
+
+.nav {
+  height: 75px;
+  width: 100%;
+  background: #101010 ;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 20px 20px 20px 20px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: #fbfbfd;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(51, 45, 61, 0.3);
+  padding: 10px 20px 10px 20px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+.popup{
+  position:absolute;
+  padding: 50px ;
+color: #eee;
+background-color: #2b282d;
+top:50%;
+left:50%;
+margin-top:-50px;   
+margin-left:-100px;
+animation-name: anime;
+animation-duration: 3s;
+}
+@keyframes anime {
+  0%   {background-color:rgb(243, 243, 249); top:50%; padding: 10px ;left:50%; bottom: 50%;  text-align: center; 
+      }
+  25%  {background-color:rgb(159, 159, 185); top:50%;padding: 20px ; left:50%;   bottom: 50%;  text-align: center; 
+      }
+  50%  {background-color:rgb(59, 59, 62);top:50%; padding: 35px ;left:50%;   bottom: 50%; text-align: center; 
+      }
+  75%  {background-color:rgb(32, 32, 35); top:50%;padding: 40px ;left:50%;  bottom: 50%;  text-align: center;  
+      }
+  100% {background-color:rgb(15, 15, 15); top:50%;padding: 50px ;left:50%;   bottom: 50%; text-align: center;  
+      }
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #f8f6f6;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px 0px 30px 30px;
+
+}
+.form .input-box {
+  width: 50%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #f4f1f1;
+}
+.form :where(.input-box input) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 5px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(241, 239, 239, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form button {
+  height: 55px;
+  width: 50%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(17, 17, 18);
+}
+.form button:hover {
+  background: rgb(17, 17, 18);
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  color: #ddd;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.search{
+  display: flex;
+  justify-content: center;
+ 
+}
+.form-control {
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  outline: none;
+}
+
+/* Search box input */
+.search-input {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  outline: none;
+}
+
+/* Search box submit button */
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 12px;
+  background-color: #121213;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Search box submit button on hover */
+.search-button:hover {
+  background-color: #070707;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 2em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    font-weight: bold;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    font-weight: 900;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+@media only screen and (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #161519;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
